@@ -86,23 +86,7 @@
     var item = {};
     ```
 
-  - [2.2](#2.2) <a name='2.2'></a> Don't use [reserved words](http://es5.github.io/#x7.6.1) as keys. It won't work in IE8. [More info](https://github.com/airbnb/javascript/issues/61).
-
-    ```javascript
-    // bad
-    var superman = {
-      default: { clark: 'kent' },
-      private: true
-    };
-
-    // good
-    var superman = {
-      defaults: { clark: 'kent' },
-      hidden: true
-    };
-    ```
-
-  - [2.3](#2.3) <a name='2.3'></a> Use readable synonyms in place of reserved words.
+  - [2.2](#2.2) <a name='2.2'></a> Use readable synonyms in place of reserved words.
 
     ```javascript
     // bad
