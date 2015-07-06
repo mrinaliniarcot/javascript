@@ -1228,9 +1228,7 @@
     };
     ```
 
-  - [16.7](#16.7) <a name='16.7'></a> **Note:** IE8 and below exhibit some quirks with named function expressions.  See [http://kangax.github.io/nfe/](http://kangax.github.io/nfe/) for more info.
-
-  - [16.8](#16.8) <a name='16.8'></a> If your file exports a single class, your filename should be exactly the name of the class.
+  - [16.7](#16.8) <a name='16.8'></a> If your file exports a single class, your filename should be exactly the name of the class.
     ```javascript
     // file contents
     class CheckBox {
