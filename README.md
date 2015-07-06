@@ -41,7 +41,7 @@
 
 ## Types
 
-  - **Primitives**: When you access a primitive type you work directly on its value.
+  - [1.1](#1.1) <a name='1.1'></a> **Primitives**: When you access a primitive type you work directly on its value.
 
     + `string`
     + `number`
@@ -57,7 +57,7 @@
 
     console.log(foo, bar); // => 1, 9
     ```
-  - **Complex**: When you access a complex type you work on a reference to its value.
+  - [1.2](#1.2) <a name='1.2'></a> **Complex**: When you access a complex type you work on a reference to its value.
 
     + `object`
     + `array`
@@ -76,7 +76,7 @@
 
 ## Objects
 
-  - Use the literal syntax for object creation.
+  - [2.1](#2.1) <a name='2.1'></a> Use the literal syntax for object creation.
 
     ```javascript
     // bad
@@ -86,7 +86,7 @@
     var item = {};
     ```
 
-  - Don't use [reserved words](http://es5.github.io/#x7.6.1) as keys. It won't work in IE8. [More info](https://github.com/airbnb/javascript/issues/61).
+  - [2.2](#2.2) <a name='2.2'></a> Don't use [reserved words](http://es5.github.io/#x7.6.1) as keys. It won't work in IE8. [More info](https://github.com/airbnb/javascript/issues/61).
 
     ```javascript
     // bad
@@ -102,7 +102,7 @@
     };
     ```
 
-  - Use readable synonyms in place of reserved words.
+  - [2.3](#2.3) <a name='2.3'></a> Use readable synonyms in place of reserved words.
 
     ```javascript
     // bad
@@ -125,7 +125,7 @@
 
 ## Arrays
 
-  - Use the literal syntax for array creation.
+  - [3.1](#3.1) <a name='3.1'></a> Use the literal syntax for array creation.
 
     ```javascript
     // bad
@@ -135,7 +135,7 @@
     var items = [];
     ```
 
-  - Use Array#push instead of direct assignment to add items to an array.
+  - [3.2](#3.2) <a name='3.2'></a> Use Array#push instead of direct assignment to add items to an array.
 
     ```javascript
     var someStack = [];
@@ -148,7 +148,7 @@
     someStack.push('abracadabra');
     ```
 
-  - When you need to copy an array use Array#slice. [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
+  - [3.3](#3.3) <a name='3.3'></a> When you need to copy an array use Array#slice. [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
 
     ```javascript
     var len = items.length;
@@ -164,7 +164,7 @@
     itemsCopy = items.slice();
     ```
 
-  - To convert an array-like object to an array, use Array#slice.
+  - [3.4](#3.4) <a name='3.4'></a> To convert an array-like object to an array, use Array#slice.
 
     ```javascript
     function trigger() {
@@ -178,7 +178,7 @@
 
 ## Strings
 
-  - Use single quotes `''` for strings.
+  - [4.1](#4.1) <a name='4.1'></a> Use single quotes `''` for strings.
 
     ```javascript
     // bad
@@ -194,8 +194,8 @@
     var fullName = 'Bob ' + this.lastName;
     ```
 
-  - Strings longer than 80 characters should be written across multiple lines using string concatenation.
-  - Note: If overused, long strings with concatenation could impact performance. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40).
+  - [4.2](#4.2) <a name='4.2'></a> Strings longer than 80 characters should be written across multiple lines using string concatenation.
+  - [4.3](#4.3) <a name='4.3'></a> Note: If overused, long strings with concatenation could impact performance. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40).
 
     ```javascript
     // bad
@@ -213,7 +213,7 @@
       'with this, you would get nowhere fast.';
     ```
 
-  - When programmatically building up a string, use Array#join instead of string concatenation. Mostly for IE: [jsPerf](http://jsperf.com/string-vs-array-concat/2).
+  - [4.4](#4.4) <a name='4.4'></a> When programmatically building up a string, use Array#join instead of string concatenation. Mostly for IE: [jsPerf](http://jsperf.com/string-vs-array-concat/2).
 
     ```javascript
     var items;
@@ -263,7 +263,7 @@
 
 ## Functions
 
-  - Function expressions:
+  - [5.1](#5.1) <a name='5.1'></a> Function expressions:
 
     ```javascript
     // anonymous function expression
@@ -282,8 +282,8 @@
     })();
     ```
 
-  - Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears.
-  - **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement. [Read ECMA-262's note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
+  - [5.2](#5.2) <a name='5.2'></a> Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears.
+  - [5.3](#5.3) <a name='5.3'></a> **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement. [Read ECMA-262's note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
 
     ```javascript
     // bad
@@ -302,7 +302,7 @@
     }
     ```
 
-  - Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
+  - [5.4](#5.4) <a name='5.4'></a> Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
 
     ```javascript
     // bad
@@ -322,7 +322,7 @@
 
 ## Properties
 
-  - Use dot notation when accessing properties.
+  - [6.1](#6.1) <a name='6.1'></a> Use dot notation when accessing properties.
 
     ```javascript
     var luke = {
@@ -337,7 +337,7 @@
     var isJedi = luke.jedi;
     ```
 
-  - Use subscript notation `[]` when accessing properties with a variable.
+  - [6.2](#6.2) <a name='6.2'></a> Use subscript notation `[]` when accessing properties with a variable.
 
     ```javascript
     var luke = {
@@ -357,7 +357,7 @@
 
 ## Variables
 
-  - Always use `var` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that.
+  - [7.1](#7.1) <a name='7.1'></a> Always use `var` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that.
 
     ```javascript
     // bad
@@ -367,7 +367,7 @@
     var superPower = new SuperPower();
     ```
 
-  - Use one `var` declaration per variable.
+  - [7.2](#7.2) <a name='7.2'></a> Use one `var` declaration per variable.
     It's easier to add new variable declarations this way, and you never have
     to worry about swapping out a `;` for a `,` or introducing punctuation-only
     diffs.
@@ -390,7 +390,7 @@
     var dragonball = 'z';
     ```
 
-  - Declare unassigned variables last. This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
+  - [7.3](#7.3) <a name='7.3'></a> Declare unassigned variables last. This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
 
     ```javascript
     // bad
@@ -413,7 +413,7 @@
     var i;
     ```
 
-  - Assign variables at the top of their scope. This helps avoid issues with variable declaration and assignment hoisting related issues.
+  - [7.4](#7.4) <a name='7.4'></a> Assign variables at the top of their scope. This helps avoid issues with variable declaration and assignment hoisting related issues.
 
     ```javascript
     // bad
@@ -481,7 +481,7 @@
 
 ## Hoisting
 
-  - Variable declarations get hoisted to the top of their scope, but their assignment does not.
+  - [8.1](#8.1) <a name='8.1'></a> Variable declarations get hoisted to the top of their scope, but their assignment does not.
 
     ```javascript
     // we know this wouldn't work (assuming there
@@ -509,7 +509,7 @@
     }
     ```
 
-  - Anonymous function expressions hoist their variable name, but not the function assignment.
+  - [8.2](#8.2) <a name='8.2'></a> Anonymous function expressions hoist their variable name, but not the function assignment.
 
     ```javascript
     function example() {
@@ -523,7 +523,7 @@
     }
     ```
 
-  - Named function expressions hoist the variable name, not the function name or the function body.
+  - [8.3](#8.3) <a name='8.3'></a> Named function expressions hoist the variable name, not the function name or the function body.
 
     ```javascript
     function example() {
@@ -551,7 +551,7 @@
     }
     ```
 
-  - Function declarations hoist their name and the function body.
+  - [8.4](#8.4) <a name='8.4'></a> Function declarations hoist their name and the function body.
 
     ```javascript
     function example() {
@@ -571,8 +571,8 @@
 
 ## Comparison Operators & Equality
 
-  - Use `===` and `!==` over `==` and `!=`.
-  - Comparison operators are evaluated using coercion with the `ToBoolean` method and always follow these simple rules:
+  - [9.1](#9.1) <a name='9.1'></a> Use `===` and `!==` over `==` and `!=`.
+  - [9.2](#9.2) <a name='9.2'></a> Comparison operators are evaluated using coercion with the `ToBoolean` method and always follow these simple rules:
 
     + **Objects** evaluate to **true**
     + **Undefined** evaluates to **false**
@@ -588,7 +588,7 @@
     }
     ```
 
-  - Use shortcuts.
+  - [9.3](#9.3) <a name='9.3'></a> Use shortcuts.
 
     ```javascript
     // bad
@@ -632,7 +632,7 @@
 
 ## Blocks
 
-  - Use braces with all multi-line blocks.
+  - [10.1](#10.1) <a name='10.1'></a> Use braces with all multi-line blocks.
 
     ```javascript
     // bad
@@ -656,7 +656,7 @@
     }
     ```
 
-  - If you're using multi-line blocks with `if` and `else`, put `else` on the same line as your
+  - [10.2](#10.2) <a name='10.2'></a> If you're using multi-line blocks with `if` and `else`, put `else` on the same line as your
     `if` block's closing brace.
 
     ```javascript
@@ -684,7 +684,7 @@
 
 ## Comments
 
-  - Use `/** ... */` for multi-line comments. Include a description, specify types and values for all parameters and return values.
+  - [11.1](#11.1) <a name='11.1'></a> Use `/** ... */` for multi-line comments. Include a description, specify types and values for all parameters and return values.
 
     ```javascript
     // bad
@@ -716,7 +716,7 @@
     }
     ```
 
-  - Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.
+  - [11.2](#11.2) <a name='11.2'></a> Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.
 
     ```javascript
     // bad
@@ -746,9 +746,9 @@
     }
     ```
 
-  - Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME -- need to figure this out` or `TODO -- need to implement`.
+  - [11.3](#11.3) <a name='11.3'></a> Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME -- need to figure this out` or `TODO -- need to implement`.
 
-  - Use `// FIXME:` to annotate problems.
+  - [11.4](#11.4) <a name='11.4'></a> Use `// FIXME:` to annotate problems.
 
     ```javascript
     function Calculator() {
@@ -760,7 +760,7 @@
     }
     ```
 
-  - Use `// TODO:` to annotate solutions to problems.
+  - [11.5](#11.5) <a name='11.5'></a> Use `// TODO:` to annotate solutions to problems.
 
     ```javascript
     function Calculator() {
@@ -777,7 +777,7 @@
 
 ## Whitespace
 
-  - Use soft tabs set to 4 spaces.
+  - [12.1](#12.1) <a name='12.1'></a> Use soft tabs set to 4 spaces.
 
     ```javascript
     // bad
@@ -796,7 +796,7 @@
     }
     ```
 
-  - Place 1 space before the leading brace.
+  - [12.2](#12.2) <a name='12.2'></a> Place 1 space before the leading brace.
 
     ```javascript
     // bad
@@ -822,7 +822,7 @@
     });
     ```
 
-  - Place 1 space before the opening parenthesis in control statements (`if`, `while` etc.). Place no space before the argument list in function calls and declarations.
+  - [12.3](#12.3) <a name='12.3'></a> Place 1 space before the opening parenthesis in control statements (`if`, `while` etc.). Place no space before the argument list in function calls and declarations.
 
     ```javascript
     // bad
@@ -846,7 +846,7 @@
     }
     ```
 
-  - Set off operators with spaces.
+  - [12.4](#12.4) <a name='12.4'></a> Set off operators with spaces.
 
     ```javascript
     // bad
@@ -856,7 +856,7 @@
     var x = y + 5;
     ```
 
-  - End files with a single newline character.
+  - [12.5](#12.5) <a name='12.5'></a> End files with a single newline character.
 
     ```javascript
     // bad
@@ -880,7 +880,7 @@
     })(this);↵
     ```
 
-  - Use indentation when making long method chains. Use a leading dot, which
+  - [12.6](#12.6) <a name='12.6'></a> Use indentation when making long method chains. Use a leading dot, which
     emphasizes that the line is a method call, not a new statement.
 
     ```javascript
@@ -920,7 +920,7 @@
         .call(tron.led);
     ```
 
-  - Leave a blank line after blocks and before the next statement
+  - [12.7](#12.7) <a name='12.7'></a> Leave a blank line after blocks and before the next statement
 
     ```javascript
     // bad
@@ -962,7 +962,7 @@
 
 ## Commas
 
-  - Leading commas: **Nope.**
+  - [13.1](#13.1) <a name='13.1'></a> Leading commas: **Nope.**
 
     ```javascript
     // bad
@@ -996,7 +996,7 @@
     };
     ```
 
-  - Additional trailing comma: **Nope.** This can cause problems with IE6/7 and IE9 if it's in quirksmode. Also, in some implementations of ES3 would add length to an array if it had an additional trailing comma. This was clarified in ES5 ([source](http://es5.github.io/#D)):
+  - [13.2](#13.2) <a name='13.2'></a> Additional trailing comma: **Nope.** This can cause problems with IE6/7 and IE9 if it's in quirksmode. Also, in some implementations of ES3 would add length to an array if it had an additional trailing comma. This was clarified in ES5 ([source](http://es5.github.io/#D)):
 
   > Edition 5 clarifies the fact that a trailing comma at the end of an ArrayInitialiser does not add to the length of the array. This is not a semantic change from Edition 3 but some implementations may have previously misinterpreted this.
 
@@ -1029,7 +1029,7 @@
 
 ## Semicolons
 
-  - **Yup.**
+  - [14.1](#14.1) <a name='14.1'></a> **Yup.**
 
     ```javascript
     // bad
@@ -1058,8 +1058,8 @@
 
 ## Type Casting & Coercion
 
-  - Perform type coercion at the beginning of the statement.
-  - Strings:
+  - [15.1](#15.1) <a name='15.1'></a> Perform type coercion at the beginning of the statement.
+  - [15.2](#15.2) <a name='15.2'></a> Strings:
 
     ```javascript
     //  => this.reviewScore = 9;
@@ -1077,7 +1077,7 @@
     var totalScore = this.reviewScore + ' total score';
     ```
 
-  - Use `parseInt` for Numbers and always with a radix for type casting.
+  - [15.3](#15.3) <a name='15.3'></a> Use `parseInt` for Numbers and always with a radix for type casting.
 
     ```javascript
     var inputValue = '4';
@@ -1101,7 +1101,7 @@
     var val = parseInt(inputValue, 10);
     ```
 
-  - If for whatever reason you are doing something wild and `parseInt` is your bottleneck and need to use Bitshift for [performance reasons](http://jsperf.com/coercion-vs-casting/3), leave a comment explaining why and what you're doing.
+  - [15.4](#15.4) <a name='15.4'></a> If for whatever reason you are doing something wild and `parseInt` is your bottleneck and need to use Bitshift for [performance reasons](http://jsperf.com/coercion-vs-casting/3), leave a comment explaining why and what you're doing.
 
     ```javascript
     // good
@@ -1113,7 +1113,7 @@
     var val = inputValue >> 0;
     ```
 
-  - **Note:** Be careful when using bitshift operations. Numbers are represented as [64-bit values](http://es5.github.io/#x4.3.19), but Bitshift operations always return a 32-bit integer ([source](http://es5.github.io/#x11.7)). Bitshift can lead to unexpected behavior for integer values larger than 32 bits. [Discussion](https://github.com/airbnb/javascript/issues/109). Largest signed 32-bit Int is 2,147,483,647:
+  - [15.5](#15.5) <a name='15.5'></a> **Note:** Be careful when using bitshift operations. Numbers are represented as [64-bit values](http://es5.github.io/#x4.3.19), but Bitshift operations always return a 32-bit integer ([source](http://es5.github.io/#x11.7)). Bitshift can lead to unexpected behavior for integer values larger than 32 bits. [Discussion](https://github.com/airbnb/javascript/issues/109). Largest signed 32-bit Int is 2,147,483,647:
 
     ```javascript
     2147483647 >> 0 //=> 2147483647
@@ -1121,7 +1121,7 @@
     2147483649 >> 0 //=> -2147483647
     ```
 
-  - Booleans:
+  - [15.6](#15.6) <a name='15.6'></a> Booleans:
 
     ```javascript
     var age = 0;
@@ -1141,7 +1141,7 @@
 
 ## Naming Conventions
 
-  - Avoid single letter names. Be descriptive with your naming.
+  - [16.1](#16.1) <a name='16.1'></a> Avoid single letter names. Be descriptive with your naming.
 
     ```javascript
     // bad
@@ -1155,7 +1155,7 @@
     }
     ```
 
-  - Use camelCase when naming objects, functions, and instances.
+  - [16.2](#16.2) <a name='16.2'></a> Use camelCase when naming objects, functions, and instances.
 
     ```javascript
     // bad
@@ -1169,7 +1169,7 @@
     function thisIsMyFunction() {}
     ```
 
-  - Use PascalCase when naming constructors or classes.
+  - [16.3](#16.3) <a name='16.3'></a> Use PascalCase when naming constructors or classes.
 
     ```javascript
     // bad
@@ -1191,7 +1191,7 @@
     });
     ```
 
-  - Use a leading underscore `_` when naming private properties.
+  - [16.4](#16.4) <a name='16.4'></a> Use a leading underscore `_` when naming private properties.
 
     ```javascript
     // bad
@@ -1202,7 +1202,7 @@
     this._firstName = 'Panda';
     ```
 
-  - When saving a reference to `this` use `_this`.
+  - [16.5](#16.5) <a name='16.5'></a> When saving a reference to `this` use `_this`.
 
     ```javascript
     // bad
@@ -1230,7 +1230,7 @@
     }
     ```
 
-  - Name your functions. This is helpful for stack traces.
+  - [16.6](#16.6) <a name='16.6'></a> Name your functions. This is helpful for stack traces.
 
     ```javascript
     // bad
@@ -1244,9 +1244,9 @@
     };
     ```
 
-  - **Note:** IE8 and below exhibit some quirks with named function expressions.  See [http://kangax.github.io/nfe/](http://kangax.github.io/nfe/) for more info.
+  - [16.7](#16.7) <a name='16.7'></a> **Note:** IE8 and below exhibit some quirks with named function expressions.  See [http://kangax.github.io/nfe/](http://kangax.github.io/nfe/) for more info.
 
-  - If your file exports a single class, your filename should be exactly the name of the class.
+  - [16.8](#16.8) <a name='16.8'></a> If your file exports a single class, your filename should be exactly the name of the class.
     ```javascript
     // file contents
     class CheckBox {
@@ -1270,8 +1270,8 @@
 
 ## Accessors
 
-  - Accessor functions for properties are not required.
-  - If you do make accessor functions use getVal() and setVal('hello').
+  - [17.1](#17.1) <a name='17.1'></a> Accessor functions for properties are not required.
+  - [17.2](#17.2) <a name='17.2'></a> If you do make accessor functions use getVal() and setVal('hello').
 
     ```javascript
     // bad
@@ -1287,7 +1287,7 @@
     dragon.setAge(25);
     ```
 
-  - If the property is a boolean, use isVal() or hasVal().
+  - [17.3](#17.3) <a name='17.3'></a> If the property is a boolean, use isVal() or hasVal().
 
     ```javascript
     // bad
@@ -1301,7 +1301,7 @@
     }
     ```
 
-  - It's okay to create get() and set() functions, but be consistent.
+  - [17.4](#17.4) <a name='17.4'></a> It's okay to create get() and set() functions, but be consistent.
 
     ```javascript
     function Jedi(options) {
@@ -1324,7 +1324,7 @@
 
 ## Constructors
 
-  - Assign methods to the prototype object, instead of overwriting the prototype with a new object. Overwriting the prototype makes inheritance impossible: by resetting the prototype you'll overwrite the base!
+  - [18.1](#18.1) <a name='18.1'></a> Assign methods to the prototype object, instead of overwriting the prototype with a new object. Overwriting the prototype makes inheritance impossible: by resetting the prototype you'll overwrite the base!
 
     ```javascript
     function Jedi() {
@@ -1352,7 +1352,7 @@
     };
     ```
 
-  - Methods can return `this` to help with method chaining.
+  - [18.2](#18.2) <a name='18.2'></a> Methods can return `this` to help with method chaining.
 
     ```javascript
     // bad
@@ -1387,7 +1387,7 @@
     ```
 
 
-  - It's okay to write a custom toString() method, just make sure it works successfully and causes no side effects.
+  - [18.3](#18.3) <a name='18.3'></a> It's okay to write a custom toString() method, just make sure it works successfully and causes no side effects.
 
     ```javascript
     function Jedi(options) {
@@ -1409,7 +1409,7 @@
 
 ## Events
 
-  - When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass a hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding and updating every handler for the event. For example, instead of:
+  - [19.1](#19.1) <a name='19.1'></a> When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass a hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding and updating every handler for the event. For example, instead of:
 
     ```js
     // bad
@@ -1440,10 +1440,10 @@
 
 ## Modules
 
-  - The module should start with a `!`. This ensures that if a malformed module forgets to include a final semicolon there aren't errors in production when the scripts get concatenated. [Explanation](https://github.com/airbnb/javascript/issues/44#issuecomment-13063933)
-  - The file should be named with camelCase, live in a folder with the same name, and match the name of the single export.
-  - Add a method called `noConflict()` that sets the exported module to the previous version and returns this one.
-  - Always declare `'use strict';` at the top of the module.
+  - [20.1](#20.1) <a name='20.1'></a> The module should start with a `!`. This ensures that if a malformed module forgets to include a final semicolon there aren't errors in production when the scripts get concatenated. [Explanation](https://github.com/airbnb/javascript/issues/44#issuecomment-13063933)
+  - [20.2](#20.2) <a name='20.2'></a> The file should be named with camelCase, live in a folder with the same name, and match the name of the single export.
+  - [20.3](#20.3) <a name='20.3'></a> Add a method called `noConflict()` that sets the exported module to the previous version and returns this one.
+  - [20.4](#20.4) <a name='20.4'></a> Always declare `'use strict';` at the top of the module.
 
     ```javascript
     // fancyInput/fancyInput.js
@@ -1471,7 +1471,7 @@
 
 ## jQuery
 
-  - Prefix jQuery object variables with a `$`.
+  - [21.1](#21.1) <a name='21.1'></a> Prefix jQuery object variables with a `$`.
 
     ```javascript
     // bad
@@ -1481,7 +1481,7 @@
     var $sidebar = $('.sidebar');
     ```
 
-  - Cache jQuery lookups.
+  - [21.2](#21.2) <a name='21.2'></a> Cache jQuery lookups.
 
     ```javascript
     // bad
@@ -1508,8 +1508,8 @@
     }
     ```
 
-  - For DOM queries use Cascading `$('.sidebar ul')` or parent > child `$('.sidebar > ul')`. [jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
-  - Use `find` with scoped jQuery object queries.
+  - [21.3](#21.3) <a name='21.3'></a> For DOM queries use Cascading `$('.sidebar ul')` or parent > child `$('.sidebar > ul')`. [jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
+  - [21.4](#21.4) <a name='21.4'></a> Use `find` with scoped jQuery object queries.
 
     ```javascript
     // bad
